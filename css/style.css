@@ -1,0 +1,21 @@
+h1 {
+  font-size: 80px;
+  font-family: Impact;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1.5rem;
+}
+
+.Button {
+  width: 250px;
+  height: 80px;
+  background-color: blue;
+  margin-bottom: 2rem;
+}
+.Button:hover {
+  background-color: #008000;
+}

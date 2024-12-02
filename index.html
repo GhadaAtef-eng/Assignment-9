@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookMark</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="Font awesome/css/all.min.css" />
+    <!-- styling sheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styling.css" />
+  </head>
+
+  <body class="position-relative">
+    <div class="py-5">
+      <section>
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <h1
+              class="position-relative text-center pacifico-regular d-inline-block"
+            >
+              Bookmarker <span></span>
+            </h1>
+          </div>
+
+          <div class="bookmark-body p-3 my-4">
+            <h2 class="text-center">
+              <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div>
+              <div class="form-group my-4">
+                <label for="siteNameInput"> Site Name </label>
+                <input
+                  oninput="validateForm(this)"
+                  type="text"
+                  id="siteNameInput"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group my-4">
+                <label for="siteURLInput"> Site URL</label>
+                <input
+                  oninput="validateForm(this)"
+                  type="url"
+                  id="siteURLInput"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="my-4 d-flex justify-content-center">
+              <button onclick="addSite()" class="px-5 py-1">Submit</button>
+            </div>
+          </div>
+
+          <div class="table">
+            <table class="table px-5">
+              <thead class="">
+                <tr class="text-center text-uppeerCase">
+                  <td>Index</td>
+                  <td>Website Name</td>
+                  <td>Visit</td>
+                  <td>Delete</td>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="error m-auto box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center"
+      >
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </header>
+
+          <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-xmark-circle p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-xmark-circle p-2"></i> Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.js"></script>
+  </body>
+</html>
